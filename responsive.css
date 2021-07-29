@@ -326,10 +326,10 @@ ul.dropdown-menu{
     font-size: 1.1em;
 }
 }
-@media (max-width: 767px){
+@media (max-width: 565px){
 .form-cntrl{
     display: block;
-    flex-basis: 100%;
+   /* flex-basis: 100%;
     /*width: 282%;
     //*height: calc(2.25rem + 2px);*//
     padding: .375rem .75rem;
