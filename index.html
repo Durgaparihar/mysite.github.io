@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 		<title>Best front end development services</title>
 			<meta name="viewport" content="width-device-width,initial-scale=1,shrink-to-fit=no">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +15,16 @@
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
 	</head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="197">
+	<nav class="navbar navbar-expand-lg navbar-sml" id="mynavbar">
 		<div class="container">
-			<a href="#" class="navbar-brand ml-5 py-3">
+			<a href="#" class="navbar-brand ml-5">
 				<img src="images/ps-logo-2.png" alt="" class="img-fluid">
 		  </a>
 <!--use toggel button-->
-      <a class="navbar-toggler collapsed " type="button" data-toggle="collapse"data-target="#myid"aria-controls="myid"aria-expand="false"aria-label="Toggle navigation">
+      <a class="navbar-toggler collapsed " data-toggle="collapse"data-target="#myid"aria-controls="myid" aria-haspopup="true"aria-expand="false"aria-label="Toggle navigation">
 		<!--<span class="navbar-toggler-icon"></span>-->
 		<span class="icon-bar top"></span>
 		<span class="icon-bar mid"></span>
@@ -30,8 +32,9 @@
 			</a>
 					<div class="collapse navbar-collapse" id="myid">
 						<ul class=" navbar-nav ml-auto">
-							<li class="dropdown nav-item  px-3 py-2 ">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdown" role="button"aria-haspopup="true" href="#">Services
+							<li class="dropdown nav-item">
+							
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown"aria-haspopup="true"aria-expand="false" href="#">Services</a>
 						
 						<ul class="dropdown-menu">
 							<li ><a class="dropdown-item"href="">Design to HTML</a></li>
@@ -39,15 +42,15 @@
 							<li><a class="dropdown-item"href="">Design to Woocommerce</a></li>
 
 					</ul>
-					</a>
+					
 			 </li>
-					<li class="nav-item  px-3 py-2">
+					<li class="nav-item">
 						<a class="nav-link"href="#">EXAMPLES</a>
 					</li>
-					<li class="nav-item px-3 py-2">
+					<li class="nav-item">
 						<a class="nav-link"href="#">ABOUT</a>
 					</li>
-					<li class="nav-item px-3 py-2">
+					<li class="nav-item">
 						<a class="nav-link"href="#">CONTACT</a>
 					</li>
 				</ul>
@@ -56,9 +59,15 @@
 					</div>
 	     </div>
 	   </div>
-</nav><br>
+</nav>
+<script type="text/javascript"> 
+	window.addEventListener("scroll",function(){
+		var navbar = document.querySelector("navbar");
+		 navbar.classList.toggel("sticky",window.onscrollY > 0);
+	})
+</script>
 <main class="wrap">
-	<section class="banner burger">
+	<section class="banner burger" id="banner">
 		<div class="container">
 			<div class="slogan">
 				<h1>
@@ -68,7 +77,7 @@
 			<p class="text-center">On demand front end development services for digital,<br>marketing and design agencies. </p>
 		</div>
 	</div>
-</section><br><br><br><br>
+</section>
 	<!--Banner section  start-->
 	<section class="burger dark-bg">
 		<div class="container">
@@ -81,7 +90,7 @@
 				</div>
 			<div class="parents">
 				<div class="col-md-4 mb-3 mb-md-0">
-					<div class="child">
+					<div class="box">
 						<h3>
 							<small>Design to</small><br>
 							HTML
@@ -90,7 +99,7 @@
 					</div>
 			</div>
 				<div class="col-md-4 mb-3 mb-md-0">
-					<div class="child ">
+					<div class="box ">
 						<h3>
 							<small>Design to</small><br>
 							WordPress
@@ -100,7 +109,7 @@
 					</div>
 				</div> 
 				<div class="col-md-4 mb-3 mb-md-0">
-					<div class="child ">	
+					<div class="box ">	
 						<h3>
 							<small>Design to</small><br>
 							WooCommerce
@@ -116,8 +125,8 @@
 	<div class="container" >
 		<div class="row">
 		<div class="col-md-12">
-			<div class="masthead" >
-				<h2>THINGS THAT MAKES US SPECIAL</h2>
+			<div class="masthead " >
+				<h2 class="mastheadhead"style="margin-left: 30px;">THINGS THAT MAKES US SPECIAL</h2>
 			</div>
 		</div>
 	</div>
@@ -219,12 +228,11 @@
 		</div>
 	</div>
 </div>
-</section>
+
 <!-- Slideshow container -->
-<section>
+
 <div class="container mx-auto text-center pt-5 mt-5"style="font-size:25px; overflow-x:hidden;">
  <div class="mySlides">
-    <div class="numbertext">1</div>
 		    <blockquote>
 			   <p>Couldn't be more pleased. They went over and above to get<br> the job done. Quick response and extremely happy with the <br>results. Highly recommend if you want the best coded <br>website for your business. We will be using again soon. <br>Thanks!!</p>
 			  </blockquote>
@@ -234,7 +242,7 @@
  </div> 
 </div>
   <div class="mySlides">
-    <div class="numbertext">2</div>
+    
 		   <blockquote>
 		   <p>Really well presented work they delivered. I really am happy<br> with the job you have performed i would like to do more<br> business with you as you have great talent and excellent<br> customer service. </p><br>
 		 </blockquote>
@@ -246,7 +254,7 @@
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3</div>
+   
 		    <blockquote>
 		    <p>This website build assignment was delivered on time in a <br>very professional manner. They are very easy to<br> communicate with and very responsive to requests and <br>comments. Very happy with the work the lads did for me. At <br>times they worked thru the night to get my project out on <br>time. Thanks chaps!</p><br>
 		  </blockquote>
@@ -257,7 +265,7 @@
   	</div>
  
   <div class="mySlides">
-    <div class="numbertext">4</div>
+    
 		    <blockquote>
 		    <p>Quick response and great quality. Have been working with<br> them for a couple of projects and I am always satisfied with<br> the results.</p>
 		  </blockquote>
@@ -269,7 +277,7 @@
   </div>
 
 </div>
-</section>
+
 <div style="text-align:center;overflow: hidden; margin-top: 0px; padding-top: 0px;">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
@@ -306,6 +314,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+</section>
 <section>
 		<div class="container">
 		<div class="row gutter"> 
@@ -315,7 +324,7 @@ function showSlides(n) {
 	</div>
 </div>
 </div>
-<form class="mt-5 text-center" method="post">
+<form class="mt-5" method="post">
 	<div class="form-group">
 		<input type="email" class="form-cntrl " id="email" style="text-align:center;" placeholder="Enter your Email">
 		<button  type="submit" class="but bttn">Submit </button>
