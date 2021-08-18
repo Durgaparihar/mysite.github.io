@@ -24,24 +24,35 @@ html,body{
     justify-content: space-between;
     z-index: 100000;
     transition: 0.3s all ease;
-    padding: 0 1rem;
-    
+    padding: 0 1rem;  
+}
+.navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: 263px;
 }
 .navbar-sml {
     background: #FFF;
     border-bottom: 1px solid #EEE;
     transition: 0.6s all;
-
 }
 .nav-link {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.8em;
     letter-spacing: 1px;
-   padding: 2em 0.8rem !important;
+    padding: 2em 0.8rem !important;
     position: relative;
     display: block;
-    }
+}
 a:active, a, a:hover {
     text-decoration: none;
     transition: all ease .3s;
@@ -68,7 +79,6 @@ a, a:focus {
     padding: 5px 100px;
     background: #fff;
     flex-basis: auto;
-    
 }
 .navbar-brand{
     position: relative;
@@ -89,8 +99,7 @@ navbar .sticky ul li a{
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
    color: rgb(243 9 9 / 90%);
     height: 50%;
-    top: 0px;
-    
+    top: 0px;  
 }
 div.navbar-nav :after{
     position: absolute;
@@ -98,53 +107,184 @@ div.navbar-nav :after{
     width: 20px;
     background: #e13838;
     left: 70px;
-   top: 30px;
+    top: 30px;
     transform: rotate(45deg);
     z-index: -1;
 }
-.service-bubbles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    overflow: hidden;
+animation:service-bubbles 5s ease-in-out 
+infinite;
+offset-path: path{"M 40 0 C 75 170 160 140
+  200 280 Q 220 400 340 400 Q 420 380 480 540";
 }
-.html {
-    left: 80%;
-    top: 30%;
+motion-path: path{“M 40 0 C 75 170 160 140
+  200 280 Q 220 400 340 400 Q 420 380 480 540”;}
+/*@keyframes service-bubbles{
+  from{ offset-distance:0%;
+    motion-offset:0%;}
+  to{ offset-distance:100%;
+motion-offset:100%;}}*/
+
+
+
+@keyframes service-bubbles{
+    0%{
+    
+        opacity: 0;
+        color: red;
+    }
+    50%{
+        
+        opacity: 0.7;
+        color: red;
+    }
+        100%{
+             opacity: 1;
+             color: red;
+        }
+    }
+    @keyframes service-bubbles1{
+    0%{
+
+        opacity: 0;
+        color: blue;
+    }
+    50%{
+        
+        opacity: 0.7;
+        color: blue;
+    }
+        100%{
+            translateX: -3px;
+             opacity: 1;
+             color:blue;
+        }
+    }
+   /* .service:nth-child(1){
+        animation-delay: 0.4s;
+        background-color: blue;
+    }
+    .service:nth-child(2){
+        animation-delay: 0.6s;
+        background-color: red;
+    }
+    .service:nth-child(3){
+        animation-delay: 0.8s;
+        /*background-color:purple;*/
+    }
+
+/*.bubble {
+  width: 70px;
+  height: 70px;
+  left: 100%;
+  right: 50%;
+  
+  background: red;
+  border-radius:100%;
+}*/
+/*.html {
+   right: 52%;
+    top: 20%;
+    text-transform: uppercase;
+ -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+     position: absolute;
+align-items: center;
     background: #E44D26;
-}
-.wordpress {
+    }*/
+.wordpress{
     left: 85%;
     top: 70%;
     background: #1E8CBE;
+    animation: service-bubbles 5s gradiant infinite;
 }
 .woocommerce {
     left: 22%;
     top: 63%;
     background: #9B5C8F;
+    animation: service-bubbles 5s gradiant infinite;
+}
+.bubble{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+  border-radius:100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.html {
+   width: 50px;
+  height: 50px;
+  text-transform: uppercase;
+  animation:service-bubbles 5s linear infinite ;
+
 }
 .service-bubbles{
-    border-radius: 120px;
-    height: 120px;
-    margin-left: -60px;
-    margin-top: -60px;
-    opacity: 0;
+    height: 30%;
+    width: 7%;
+    right: 14%;
+    top: -20%;
     position: absolute;
-    transform: scale(0,0);
-    width: 120px;
+    border-radius: 100%;
+    animation:blinker 3s linear infinite ;
+    background-color: red;
+-webkit-tap-highlight-color: transparent;
+
+}
+.serviceb{
+    height: 30%;
+    width: 7%;
+    right: 13%;
+    top: 70%;
+    position: absolute;
+    border-radius: 100%;
+    animation:blinker 3s linear infinite ;
+    background-color: blue;
+-webkit-tap-highlight-color: transparent;
+
+}
+.service-bubbles2{
+    height: 30%;
+    width: 7%;
+    left: 14%;
+    top: 40%;
+    position: absolute;
+    border-radius: 100%;
+    animation:blinker 3s linear infinite ;
+    background-color: purple;
+-webkit-tap-highlight-color: transparent;
+
+}
+ .blink_me {
+    color: red;
+    animation: blinker 3s linear infinite;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes blinker {
+    0%{
+        opacity: 0;
+    }
+  50% {
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .show-bubble{
+    -webkit-animation: 1.2s ease 0s normal forwards 1 running bubbly;;
     animation: 1.2 ease 0s normal forwards 1 running bubbly;
 }
 .burger {
     padding: 100px 0;
 }
 .banner{
-    background: url(./images/banner-bg.gif);
+    background: url(./images/banner-bg.jpg);
     height:100vh;
- 
 }
 .banner .slogan {
     width: 100%;
@@ -159,12 +299,11 @@ div.navbar-nav :after{
 .banner h1 small{
     font-weight: 600;
 }
-
 .banner p {
     font-size: 1.5rem;
     opacity: 0.8;
     margin-top: 1em;
-    }
+}
 .navbar-collapse {
     flex-grow: 1;  
     align-items: center;
@@ -208,15 +347,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     vertical-align: .255em;
     content: "";
     border-top: .3em solid;
-   border-right: .3em solid transparent;
+    border-right: .3em solid transparent;
     border-bottom: 0;
     border-left: .3em solid transparent;
 }
-
 .dropdown-toggle ::after, ::before {
     box-sizing: border-box;
 }
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -238,7 +375,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border-radius: .25rem;
     box-sizing: border-box :30px;
 }
-
 .dropdown-item {
     display: block;
     width: 100%;
@@ -260,8 +396,7 @@ ul.dropdown-menu{
     left: -75px;
     width: 140%;
     height: 150px;
-    border-radius: 5px;
-   
+    border-radius: 5px; 
 }
 .dropdown-menu.show {
     display: block;
@@ -284,17 +419,14 @@ ul.dropdown-menu{
     cursor: pointer;
 }
 .navbar-light .navbar-toggler {
-   /* color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);*/
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
 }
 .form-inline {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
-/*.burger {
-    padding: 100px 0;
-}*/
 .masthead {
     margin-bottom: 50px;
 }
@@ -320,7 +452,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .text-white {
     color: #fff !important;
 }
-
 .masthead h2 {
     opacity: 0.5;
     font-weight: 600;
@@ -328,7 +459,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     font-size: 1.0em;
     letter-spacing: 1px;
     line-height: 1.7;
-
 }
 .mastheadhead h2{
     opacity: 0.5;
@@ -360,7 +490,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     width: 100%;
     margin-left: -16rem;
 }
-
 .grand-parent{
     display: flex;
     flex-wrap: wrap;
@@ -381,9 +510,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
  div .box:hover{
     background-color: #fff;
     color: #000;
-  transform: translateY(-20px);
+    transform: translateY(-20px);
 }
-
 .box a {
     position: absolute;
     top: 0;
@@ -429,14 +557,12 @@ a, a:focus {
     background: #FFF;
     padding: 30px;
     border-radius: 4px;
-    margin-left: 25px;
 }
 .stats h4 {
     color: #FF4242;
     font-weight: 600;
     font-size: 2em;
 }
-
 .h5, h5 {
     font-size: 1.25rem;
     text-align: center;
@@ -480,7 +606,7 @@ p {
 }
 /* Slideshow container */
 .slideshow-container {
-background-color:#F5F6F8 ;
+  background-color:#F5F6F8 ;
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -520,8 +646,8 @@ background-color:#F5F6F8 ;
 
 /* The dots/bullets/indicators */
 .point{
-    text-align:center;
-    overflow: hidden;
+     text-align:center;
+     overflow: hidden;
      margin-top: 0px; 
      padding-top: 0px; 
      letter-spacing: 7px;
@@ -537,11 +663,9 @@ background-color:#F5F6F8 ;
   transition: background-color 0.6s ease;
   overflow-x: hidden;
 }
-
 .active, .dot:hover {
   background-color: #dd5d5d;
 }
-
 .h2{
     margin-bottom: .5rem;
     font-family: inherit;
@@ -569,17 +693,15 @@ background-color:#F5F6F8 ;
     width: 30%;
     margin: 0 auto;
     justify-content: center;
-
 }
 .email-optin .form-group .form-control {
     height: 46px;
     border-radius: 25px;
 }
 .form-control {
-       display: block;
-    width: 50%;
+    display: block;
+    width: 40%;
     margin-left: 25%;
-    
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -656,22 +778,19 @@ button, select {
 .form-group button {
     position: relative;
     width: 20%;
-
     border-radius: 0.25rem;                    
     border-top-left-radius:1.75rem;
     border-top-right-radius: 1.75rem;
     border-bottom-right-radius: 1.75rem;
     border-bottom-left-radius:1.75rem;
-    margin-left: 450px;
+    margin-left: 350px;
     height: 48px;
-
     }
 .form-group{
     position: relative;
     width: 55%;
    margin: 0 auto;
-   text-align: center;
-    
+   text-align: center;   
 }
 .col-md-12{
     position: relative;
@@ -710,8 +829,7 @@ button, select {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.8em;
-    
-   }
+}
 .footer-nav a {
     color: #f8f8f8;
 }

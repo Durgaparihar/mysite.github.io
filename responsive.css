@@ -130,14 +130,6 @@ div.navbar-nav :before{
     z-index: -1000;
 }
 }
-@media (min-width: 768px){
-.dropdown-menu {
-    left: -62px;
-    padding: 25px 0px;
-    top: 50px;
-    background-color: #D94242;
-}
-}
 @media (max-width: 767px){
 .navbar-nav a::before {
     content: "";
@@ -156,7 +148,7 @@ div.navbar-nav :before{
 }
 @media (min-width: 768px){
 .navbar-nav .nav-link {
-    color: #999;
+    color: #665d5d;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.8em;
@@ -201,11 +193,10 @@ ul.dropdown-menu{
 .dropdown-menu {
     left: -62px;
     padding: 25px 0px;
-    top: 40px;
     background-color: #D94242;
+    top: 50px;
 }
 }
-
 @media (max-width: 767px){
 .form-inline {
     display: flex;
@@ -331,6 +322,11 @@ ul.dropdown-menu{
 .dropdown-menu.show {
     display: block;
     background-color: #000;
+}
+}
+@media (min-width: 992px){
+.banner h1 {
+    font-size: 4em;
 }
 }
 @media(max-width: 576px){

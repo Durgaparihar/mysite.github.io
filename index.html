@@ -15,12 +15,14 @@
 			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
      
 	</head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-sml" id="mynavbar">
 		<div class="container">
-			<a href="#" class="navbar-brand ml-5">
+			<a href="#" class="navbar-brand">
 				<img src="images/ps-logo-2.png" alt="" class="img-fluid">
 		  </a>
 <!--use toggel button-->
@@ -31,7 +33,7 @@
 		<span class="icon-bar btm"></span>
 			</a>
 					<div class="collapse navbar-collapse" id="myid">
-						<ul class=" navbar-nav ml-auto">
+						<ul class=" navbar-nav">
 							<li class="dropdown nav-item">
 							
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown"aria-haspopup="true"aria-expand="false" href="#">Services</a>
@@ -54,8 +56,8 @@
 						<a class="nav-link"href="#">CONTACT</a>
 					</li>
 				</ul>
-					<div class=" form-inline my-2 ml-lg-5 my-lg-0">
-						<a class=" heat py-2 mr-2 px-3 font-weight-normal"href="#">GET ESTIMATE</a>
+					<div class=" form-inline  ml-lg-5 ">
+						<a class=" heat py-2 font-weight-normal"href="#">GET ESTIMATE</a>
 					</div>
 	     </div>
 	   </div>
@@ -67,27 +69,33 @@
 	})
 </script>
 <main class="wrap">
-	<section class="banner burger">
+	<section class="banner burger" id="banner">
 		<div class="container">
 			<div class="slogan">
-				<h1>
-					<small>Design to</small><br>
-					<span style="color: #e13838;font-size:3rem; font-weight:600;">HTML</span>
-			</h1>
+				<h1><small>Design to </small><br>				
+            <span class="blink_me">Html</span>
+            <div class="service-bubbles"></div>
+            <span class=" blink_me" id="myDIV">WordPress</span>
+            <div class="serviceb"></div>
+            <span class="blink_me">WooCommerce </span>
+            <div class="service-bubbles2"></div>
+           </h1>
 			<p class="text-center">On demand front end development services for digital,<br>marketing and design agencies. </p>
 		</div>
 	</div>
-	<div class="service-bubbles">
-		<div class="service-bubbles html"></div>
-		<div class="service-bubbles wordpress"></div>
+	<!--<div class="service-bubbles" >
+		<div style="display: none; color: rgb(151, 183, 50);" class="bubble html" ></div>
+		<div  style="display: none; color: blue"; class="service-bubbles wordpress"></div>
 		<div class="service-bubbles Woocommerce"></div>
-	</div>
-	<script type="text/javascript">
-		$(".service-bubbles").click(function(){
-   $(this).bubbles().toggleClass("circle");
-}); 
-	</script>
+	</div>-->
+	<script>
+ 
+     
+       
+</script>
+
 </section>
+    
 	<!--Banner section  start-->
 	<section class="burger dark-bg">
 		<div class="container">
